@@ -1,5 +1,5 @@
 import {Text} from 'react-native'
 
-export default() =>(
+export default () =>(
   <Text> Componente numero 1 </Text>
 )

@@ -1,18 +1,18 @@
 import {
   Text,
-  StyleSheet,
   SafeAreaView,
-  View,
-  Platform,
   StatusBar,
+  View,
   ScrollView,
   Image
 } from 'react-native';
-import Comp1 from './components/Comp1.Jsx';
+import Comp1 from './components/Comp1.jsx';
 import Soma from './components/Soma.jsx';
+import style from './components/Estilo';
 
 export default (App) => (
   <ScrollView>
+    <StatusBar backgroundColor={'white'} barStyle={'dark-content'}/>
   <View style={style.viewSafeAndroid}>
     <SafeAreaView>
       <Text style={style.textG}> Bom dia </Text>
@@ -36,6 +36,7 @@ export default (App) => (
         In nec nibh nec velit eleifend tempor. Cras ultricies interdum
         tincidunt. Morbi at erat at nisl efficitur convallis sed in ante.{' '}
       </Text>
+      <Text style={style.txtTitulo}> TURMA 2TDSPF</Text>
     </SafeAreaView>
   </View>
   <View style={style.containerImg} >
@@ -44,21 +45,3 @@ export default (App) => (
   </ScrollView>
 );
 
-const style = StyleSheet.create({
-  textG: {
-    fontSize: 30,
-  },
-  viewSafeAndroid: {
-    flex: 1,
-    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
-  },
-  containerImg:{
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  img:{
-    width: 200,
-    height: 200,
-  
-  },
-});
